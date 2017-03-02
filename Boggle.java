@@ -68,17 +68,12 @@ public class Boggle {
     }
     
     public BogglePiece getPieceAt(int row, int col){
-        //check that position is in board bounds
+        //check that piece is in board bounds
         if(col >= 0 && col < this.boardSize && row >= 0 && row < this.boardSize ){
             return(this.board[col][row]);
         } else{
             return null;
         }
-    }
-    
-    //TODO: retire plus get rid of piece obj
-    public BogglePiece getPieceAt(Position position){
-        return Boggle.this.getPieceAt(position.row, position.col);
     }
 
     public void buildTestBoard(int size){
